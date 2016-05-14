@@ -1,0 +1,3 @@
+tandeem_homepage:
+    path:     /
+    defaults: { _controller: TandeemBundle:Default:index }
