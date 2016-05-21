@@ -1,0 +1,20 @@
+{% extends 'TandeemBundle:Base:Base.html.twig' %}
+    {% block container %}
+    {% for post in posts %}
+
+      {{ post.title }} <br><br>
+      {{ post.description }}<br><br>
+      {{ post.date|date("d/m/Y") }}<br><br><hr width="20%">
+
+        {% for comment in comments %}
+          {% if post.id == comment.posts.id %}
+          Par {{ comment.user }}<br>
+          {{ comment.content }}<br><br>
+          Likes : {{ comment.Likes }}<br><br>
+          {% endif %}
+        {% endfor %}
+
+      <hr>
+
+    {% endfor %}
+    {% endblock %}

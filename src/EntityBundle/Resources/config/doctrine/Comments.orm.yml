@@ -1,0 +1,32 @@
+EntityBundle\Entity\Comments:
+    type: entity
+    table: null
+    repositoryClass: EntityBundle\Repository\CommentsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        content:
+            type: string
+            length: '1080'
+        likes:
+            type: integer
+            nullable: true
+            column: Likes
+    manyToOne:
+      user:
+        targetEntity: User
+        inversedBy: id
+        joinColumn:
+          name: user_id
+          referencedColumnName: id
+      posts:
+        targetEntity: Posts
+        inversedBy: id
+        joinColumn:
+          name: posts_id
+          referencedColumnName: id
+    lifecycleCallbacks: {  }

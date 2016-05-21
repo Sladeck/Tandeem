@@ -1,0 +1,30 @@
+{% extends 'TandeemBundle:Base:Base.html.twig' %}
+    {% block container %}
+    <hr>
+    <table border="1px solid black">
+      {% for post in posts %}
+
+
+          <tr id="{{ post.id }}">
+            <td>
+              {{ post.title }}
+            </td>
+            <td>
+              {{ post.description }}
+            </td>
+            <td>
+              {{ post.date|date("d/m/Y") }}
+            </td>
+            <td>
+              <form class="delete" method="post">
+                <input type="hidden" name="id" value="{{ post.id }}">
+                <input type="submit" name="deletePost" value="Supprimer">
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <hr>
+
+
+    {% endblock %}

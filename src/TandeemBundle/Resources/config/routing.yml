@@ -1,3 +1,23 @@
 tandeem_homepage:
     path:     /
     defaults: { _controller: TandeemBundle:Default:index }
+
+Blog:
+    path: /Blog
+    defaults: { _controller: TandeemBundle:Blog:index }
+
+Show_Posts:
+    path: /Posts
+    defaults: { _controller: TandeemBundle:Posts:show }
+
+Create_Posts:
+    path: /CreatePosts
+    defaults: { _controller: TandeemBundle:Posts:index }
+
+Upload_Posts:
+    path: /createPosts/create
+    defaults: { _controller: TandeemBundle:Posts:create }
+
+Delete_Posts:
+    path: /Post/delete
+    defaults: { _controller: TandeemBundle:Posts:delete }

@@ -1,0 +1,23 @@
+EntityBundle\Entity\Posts:
+    type: entity
+    table: null
+    repositoryClass: EntityBundle\Repository\PostsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            column: Title
+        description:
+            type: string
+            length: '510'
+            column: Description
+        date:
+            type: date
+            column: Date
+    lifecycleCallbacks: {  }

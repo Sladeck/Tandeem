@@ -1,0 +1,17 @@
+{% include 'TandeemBundle:Base:Base.html.twig' %}
+
+{% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
+  {% if is_granted('ROLE_ADMIN') %}
+
+    {% block container %}
+
+    <form id="create" method="post">
+      <input type="text" name="title" placeholder="Title" required><br><br>
+      <textarea name="description" rows="8" cols="40" placeholder="Description..." required></textarea><br><br>
+      <input type="submit" name="validCreate">
+    </form>
+
+    {% endblock %}
+
+  {% endif %}
+{% endif %}
