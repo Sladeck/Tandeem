@@ -15,7 +15,7 @@ EntityBundle\Entity\Posts:
             column: Title
         description:
             type: string
-            length: '510'
+            length: '5000'
             column: Description
         date:
             type: date
