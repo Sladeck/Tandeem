@@ -1,16 +1,48 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Tandeem{% endblock %}</title>
-    {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" media="all"/>
-    {% endblock %}
-    {% block javascript %}
-        <script src="{{ asset('assets/js/jquery-2.2.3.min.js') }}"></script>
-        <script src="{{ asset('assets/js/action.js') }}"></script>
-        <script src="{{ asset('assets/js/user_script.js') }}"></script>
-    {% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}"/>
-</head>
+{% if not is_granted('ROLE_ADMIN') %}
+<header class="headerblog" role="banner">
+    <a href="{{ path('tandeem_homepage') }}">
+        <img class="logo" src="{{ asset('assets/img/logos/logoblog.png') }}" alt="logo">
+    </a>
+    <nav>
+        {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
+        <a class="link" href="{{ path('fos_user_security_logout') }}"
+           class="logoutLink">Déconnexion</a>
+        {% else %}
+        <a class="link" id="loginBtn">Connexion</a>
+        <a class="link" id="registerBtn">Inscription</a>
+        {% endif %}
+    </nav>
+    <div id="loginModal" class="loginModal">
+        <div class="loginModalContent">
+            <p>Connexion</p>
+            <form action="{{ path("fos_user_security_check") }}" method="post">
+            <input type="hidden" name="_csrf_token"
+                   value="{{ fos_csrf_provider.generateCsrfToken('authenticate') }}">
+            <input type="text" name="_username" placeholder="Pseudo" required="required"
+                   autofocus><br>
+            <input type="password" name="_password" placeholder="Mot de passe"
+                   required="required"><br>
+            <input type="submit" value="Connexion">
+            </form>
+        </div>
+    </div>
+    <div id="registerModal" class="registerModal">
+        <div class="registerModalContent">
+            <p>Inscription</p>
+            <form action="{{ path("fos_user_registration_register") }}" method="post">
+            <input type="hidden" name="fos_user_registration_form[_token]"
+                   value="{{ csrf_token('registration') }}">
+            <input type="email" name="fos_user_registration_form[email]" placeholder="Email"
+                   required="required"><br>
+            <input type="text" name="fos_user_registration_form[username]" placeholder="Pseudo"
+                   required="required"><br>
+            <input type="password" name="fos_user_registration_form[plainPassword][first]"
+                   placeholder="Mot de passe" required="required"><br>
+            <input type="password" name="fos_user_registration_form[plainPassword][second]"
+                   placeholder="Vérification" required="required"><br>
+            <input type="submit" value="Inscription">
+            </form>
+        </div>
+    </div>
+</header>
+{% endif %}

@@ -1,17 +1,20 @@
-{% include 'TandeemBundle:Base:Base.html.twig' %}
+{% extends 'TandeemBundle:Base:Base.html.twig' %}
 
 {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
-  {% if is_granted('ROLE_ADMIN') %}
+    {% if is_granted('ROLE_ADMIN') %}
 
-    {% block body %}
+        {% block body %}
+            {% include 'TandeemBundle:Base:Header.html.twig' %}
+            {% include 'TandeemBundle:Base:Dashboard.html.twig' %}
 
-    <form id="create" method="post">
-      <input type="text" name="title" placeholder="Title" required><br><br>
-      <textarea name="description" rows="8" cols="40" placeholder="Description..." required></textarea><br><br>
-      <input type="submit" name="validCreate">
-    </form>
+            <form id="create" method="post">
+                <input type="text" name="title" placeholder="Title" required><br><br>
+                <textarea name="description" rows="8" cols="40" placeholder="Description..."
+                          required></textarea><br><br>
+                <input type="submit" name="validCreate">
+            </form>
 
-    {% endblock %}
+        {% endblock %}
 
-  {% endif %}
+    {% endif %}
 {% endif %}

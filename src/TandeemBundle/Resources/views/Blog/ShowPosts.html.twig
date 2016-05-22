@@ -1,5 +1,8 @@
 {% extends 'TandeemBundle:Base:Base.html.twig' %}
+
     {% block body %}
+        {% include 'TandeemBundle:Base:Header.html.twig' %}
+        {% include 'TandeemBundle:Base:Dashboard.html.twig' %}
     <hr>
     <table border="1px solid black">
       {% for post in posts %}

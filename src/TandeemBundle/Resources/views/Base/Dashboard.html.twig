@@ -1,6 +1,6 @@
 {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
     {% if is_granted('ROLE_ADMIN') %}
-        {% block body %}
+
             <div class="dashboard">
                 <h1>DASHBOARD</h1><br><br>
                 <ul>
@@ -16,6 +16,6 @@
                     <li><a class="link" href="{{ path('fos_user_security_logout') }}" class="logoutLink">Déconnexion</a></li>
                 </ul>
             </div>
-        {% endblock %}
+
     {% endif %}
 {% endif %}

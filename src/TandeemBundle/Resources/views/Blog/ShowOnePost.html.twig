@@ -1,41 +1,44 @@
-{% include 'TandeemBundle:Base:Base.html.twig' %}
+{% extends 'TandeemBundle:Base:Base.html.twig' %}
 
 {% block body %}
+    {% include 'TandeemBundle:Base:Header.html.twig' %}
+    {% include 'TandeemBundle:Base:Dashboard.html.twig' %}
+    <main class="onepost" role="main">
+        {% for content in post %}
 
-  {% for content in post %}<br><br>
-    {{ content.title }}<br><br>
-    {{ content.description }}
+            <article>
+                <h2>{{ content.title }}</h2>
+                <p>{{ content.date|date("d/m/Y") }}</p>
+                <img src="{{ asset('assets/img/articleimg.jpg') }}" alt="article">
+                <p>{{ content.description }}</p>
+            </article>
 
-    <div class="Comments">
-      <br><br><h1>Commentaires :</h1>
+            <div class="comments">
+                <h2>Commentaires :</h2>
 
-        {% for comment in comments %}<br>
+                {% for comment in comments %}
+                    <div id="{{ comment.id }}">
+                        {{ comment.user.username }}<br><br>
+                        {{ comment.content }}
+                        {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
+                            {% if (is_granted('ROLE_ADMIN')) or ((comment.user.username) == (app.user.username)) %}
+                                <form class="deleteComment" method="post">
+                                    <input type="hidden" name="id" value="{{ comment.id }}">
+                                    <input type="submit" name="delete" value="Supprimer">
+                                </form>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
 
-          <div id="{{ comment.id }}">
-
-            {{ comment.user.username }}<br><br>
-            {{ comment.content }}
-
-              {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
-                {% if (is_granted('ROLE_ADMIN')) or ((comment.user.username) == (app.user.username)) %}
-
-                <form class="deleteComment" method="post">
-                  <input type="hidden" name="id" value="{{ comment.id }}">
-                  <input type="submit" name="delete" value="Supprimer">
-                </form>
-
-
-                {% endif %}
-              {% endif %}
-          </div>
+        {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
+            <form class="createComment" method="post">
+                <input type="hidden" name="idPost" value="{{ content.id }}">
+                <textarea name="content" rows="8" cols="40" id="textar"></textarea>
+                <input type="submit" name="validComment" value="Poster">
+            </form>
+        {% endif %}
         {% endfor %}
-      </div><br><br>
-
-    <form class="createComment" method="post">
-      <input type="hidden" name="idPost" value="{{ content.id }}">
-      <textarea name="content" rows="8" cols="40" id="textar"></textarea>
-      <input type="submit" name="validComment" value="Poster">
-    </form>
-  {% endfor %}
-
+    </main>
 {% endblock %}

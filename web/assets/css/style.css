@@ -208,7 +208,8 @@ body {
     border: none;
     overflow: hidden;
     width: 100%;
-    height: 150px; }
+    height: 150px;
+    margin: auto; }
   .mainindex .insta p {
     padding: 2%; }
 
@@ -228,6 +229,7 @@ body {
 
 /*FOOTER*/
 footer {
+  clear: both;
   background: #100705;
   width: 100%;
   height: 200px;
@@ -448,7 +450,7 @@ footer {
     height: 30px; }
 
   footer {
-    height: 300px; }
+    height: 320px; }
     footer .logofooter {
       max-width: 6%; }
     footer p {
@@ -525,7 +527,12 @@ footer {
       padding: 0; }
     .mainblog article img {
       width: 100%; }
+    .mainblog article a {
+      color: inherit;
+      text-decoration: none; }
     .mainblog article h2 {
+      padding: 0;
+      padding-left: 3%;
       font-family: Lato, sans-serif;
       font-size: 2rem; }
   .mainblog .events, .mainblog .categories {
@@ -541,6 +548,30 @@ footer {
   .mainblog .networksbanners {
     width: 100%;
     margin: 4% 0; }
+
+.onepost {
+  text-align: left;
+  padding: 5%; }
+  .onepost article {
+    margin: 3%; }
+    .onepost article img {
+      width: 100%; }
+  .onepost h2 {
+    padding: 0;
+    padding-left: 3%;
+    font-family: Lato, sans-serif;
+    font-size: 2rem; }
+  .onepost textarea {
+    width: 100%; }
+  .onepost .createComment input[type=submit] {
+    float: right;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background: linear-gradient(to top right, #f3a6b6, #6684c2);
+    color: white;
+    text-transform: uppercase; }
 
 @media (min-width: 641px) {
   .headerblog {
@@ -586,10 +617,18 @@ footer {
         .mainblog article .postinfos > * {
           padding: 0;
           padding-left: 5%; }
-    .mainblog .events, .mainblog .categories {
+        .mainblog article .postinfos a {
+          color: inherit;
+          text-decoration: none;
+          margin: 0; }
+          .mainblog article .postinfos a h2 {
+            padding: 0;
+            padding-left: 5%; }
+    .mainblog .side {
       clear: both;
-      border: 1px solid #cdcbcb; }
-      .mainblog .events h3, .mainblog .categories h3 {
+      width: 50%;
+      margin: auto; }
+      .mainblog .side h3 {
         text-transform: uppercase;
         font-family: Lato, sans-serif;
         text-align: center;
@@ -597,8 +636,60 @@ footer {
         background: #bec9e2;
         margin: 0 30%;
         padding: 2% 0; }
-    .mainblog .networksbanners {
-      width: 100%;
-      margin: 4% 0; } }
+      .mainblog .side .events, .mainblog .side .categories {
+        border: 1px solid #cdcbcb; }
+      .mainblog .side .networksbanners {
+        margin: 4% 0; }
+
+  .onepost {
+    text-align: center;
+    padding: 5%; }
+    .onepost article {
+      margin: 3%; }
+      .onepost article img {
+        width: 50%; }
+      .onepost article p {
+        padding: 2% 0; }
+    .onepost h2 {
+      padding: 2% 0; } }
+@media (min-width: 1025px) {
+  .headerblog {
+    height: 120px; }
+    .headerblog .logo {
+      max-width: 7%; }
+
+  .mainblog {
+    text-align: left;
+    padding: 0 10%; }
+    .mainblog h1 {
+      font-size: 2.5rem;
+      margin: 2% 0; }
+    .mainblog article {
+      margin: 0;
+      padding: 5% 0;
+      width: 70%; }
+      .mainblog article img {
+        max-width: 49%;
+        min-height: 200px; }
+      .mainblog article .postinfos {
+        width: 49%;
+        min-height: 200px; }
+        .mainblog article .postinfos > * {
+          padding: 0;
+          padding-left: 5%; }
+        .mainblog article .postinfos a {
+          color: inherit;
+          text-decoration: none;
+          margin: 0; }
+          .mainblog article .postinfos a h2 {
+            padding: 0;
+            padding-left: 5%; }
+    .mainblog .side {
+      display: none; }
+
+  .onepost article {
+    margin: 0; }
+    .onepost article img {
+      width: 40%; } }
 
 /*# sourceMappingURL=style.css.map */
