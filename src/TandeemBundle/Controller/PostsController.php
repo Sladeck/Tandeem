@@ -32,10 +32,12 @@ class PostsController extends Controller
   {
     $post = new Posts();
 
+    $image = $infos->get("image");
     $title = $infos->get("title");
     $description = $infos->get("description");
-    $post->setDate(new \DateTime(date('Y-m-d H:i:s')));
 
+    $post->setImage($image);
+    $post->setDate(new \DateTime(date('Y-m-d H:i:s')));
     $post->setTitle($title);
     $post->setDescription($description);
 
@@ -58,6 +60,7 @@ class PostsController extends Controller
   {
     $id = $infos->get("id");
     $em = $this->getDoctrine()->getManager();
+    $deleteComms = $em->find('EntityBundle:Comments', $id);
     $delete = $em->find('EntityBundle:Posts', $id);
     $em->remove($delete);
     $em->flush();

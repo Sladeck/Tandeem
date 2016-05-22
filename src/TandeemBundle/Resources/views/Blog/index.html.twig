@@ -52,14 +52,18 @@
         <main class="mainblog" role="main">
             <h1>Le blog</h1>
             {% for post in posts|reverse %}
-                <article>
-                    <img src="{{ asset('assets/img/articleimg.jpg') }}" alt="article">
-                    <div class="postinfos">
-                        <p>{{ post.date|date("d/m/Y") }}</p>
+            <article>
+                <a href="/Post/{{ post.id }}">
+                    <img src="{{ post.image }}" alt="article">
+                </a>
+                <div class="postinfos">
+                    <p>{{ post.date|date("d/m/Y") }}</p>
+                    <a href="/Post/{{ post.id }}">
                         <h2>{{ post.title }}</h2>
-                        <p>{{ post.description|truncate(150, true) }}</p>
-                    </div>
-                </article>
+                    </a>
+                    <p>{{ post.description|truncate(150, true) }}</p>
+                </div>
+            </article><br><br>
                 {#
                             {% for comment in comments %}
                                 {% if post.id == comment.posts.id %}

@@ -108,4 +108,33 @@ class Posts
     {
         return $this->date;
     }
+    /**
+     * @var string
+     */
+    private $Image;
+
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Posts
+     */
+    public function setImage($image)
+    {
+        $this->Image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->Image;
+    }
 }
