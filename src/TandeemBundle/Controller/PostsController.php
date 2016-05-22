@@ -48,6 +48,7 @@ class PostsController extends Controller
 
 
       $json = json_encode(Array("day" => $post->getDate()->format('Y-m-d H:i:s'),
+          "image"=> $post->getImage(),
           "content" => $post->getDescription(),
           "title" => $post->getTitle(),
           "id" => $post->getId()
