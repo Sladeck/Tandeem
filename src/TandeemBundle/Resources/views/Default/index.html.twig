@@ -1,1 +1,104 @@
 {% extends 'TandeemBundle:Base:Base.html.twig' %}
+
+{% block body %}
+    <header class="headerindex" role="banner">
+        <div class="headerbackground"></div>
+        <img class="logo" src="{{ asset('assets/img/logos/logo.png') }}" alt="logo">
+        <nav>
+            <a class="link" href="#presentationanchor">L'application</a>
+            <a class="link" href="#offersanchor">Avis</a>
+            <a class="link" href="#teamanchor">L'équipe</a>
+            <a class="link" href="#footeranchor">Contact</a>
+            <a class="link" href="{{ path('Blog') }}">Blog</a>
+        </nav>
+        <h1><span class="bold">Motivons-nous</span> ensemble vers un idéal</h1>
+        <p>Rien de mieux pour atteindre ses objectifs que de les partager avec une communauté<br>Essayez <span
+                    class="bold">Tandeem</span>
+            maintenant !</p>
+        <a href="#"><img class="androidapp" src="{{ asset('assets/img/androidapp.png') }}" alt="android"></a>
+        <a href="#"><img class="appleapp" src="{{ asset('assets/img/appleapp.png') }}" alt="apple"></a>
+        <a href="#presentationanchor"><img class="downarrow" src="{{ asset('assets/img/downarrow.png') }}" alt="downarrow"></a>
+    </header>
+    <div class="diagonal"></div>
+    <main class="mainindex" role="main">
+        <div class="presentation" id="presentationanchor">
+
+            <div class="divSquare first">
+                <h2>Notre concept</h2>
+                <hr>
+                <p>Vous êtes-vous déjà imaginé partager un objectif que vous vous fixez sur le long terme, tout domaines
+                    confondus, mais en groupe ?<br>Fini d‘être seul, avec Tandeem cela est maintenant possible. Cherchez
+                    les
+                    personnes ayant le même but que vous et redécouvrez l‘épanouissement que procure l‘atteinte d‘un
+                    idéal
+                    touten étant accompagné.<br>Découvrez l‘univers de Tandeem et atteignez vos objectifs ensemble.
+                </p></div>
+
+            <div class="divSquare second">
+                <img class="lotus" src="{{ asset('assets/img/logos/lotus.png') }}" alt="lotus">
+            </div>
+            <div class="divSquare third">
+                <img class="phone" src="{{ asset('assets/img/phone.png') }}" alt="phone"></div>
+
+            <div class="divSquare fourth">
+                <h2>Notre application</h2>
+                <hr>
+                <p>Ayez accès à toutes les fonctionnalités que propose notre concept et téléchargez l‘application,
+                    disponible
+                    sur Android et iOS. Profitez d‘un suivi exclusif, un accès aux évenements près de chez vous et
+                    rejoignez
+                    notre communauté à travers notre blog.<br>Avec Tandeem, retrouver la motivation n‘a jamais été aussi
+                    simple.
+                </p>
+                <div class="apps">
+                    <a href="#"><img class="androidapp" src="{{ asset('assets/img/androidapp.png') }}"
+                                     alt="android"></a>
+                    <a href="#"><img class="appleapp" src="{{ asset('assets/img/appleapp.png') }}" alt="apple"></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="diagonal"></div>
+        <div class="offers" id="offersanchor">
+            <h3><span class="bold gradient">Inscrivez-vous</span> maintenant et profitez de nos offres !</h3>
+            <div class="divoffers">
+                <p>Format gratuit</p>
+                <p class="fat">Offre gratuite</p>
+                <button>En savoir plus</button>
+            </div>
+            <div class="divoffers">
+                <p>Format payant</p>
+                <p class="fat">10€/mois</p>
+                <button>En savoir plus</button>
+            </div>
+        </div>
+        <div class="quotebackground">
+            <img class="quote" src="{{ asset('assets/img/openquote.png') }}" alt="openquote">
+            <blockquote>
+                Cette application a changé l‘image que j‘avais de faire du sport, je m‘en pensais incapable jusqu‘à
+                ce que je trouve un groupe ayant le même but que moi. En un mois et avec les activités organisées j‘ai
+                réussi à atteindre un but que je pensais inatteignable depuis longtemps. Je remercie Tandeem pour ça !
+            </blockquote>
+            <img class="quote" src="{{ asset('assets/img/closequote.png') }}" alt="closequote">
+        </div>
+        <div class="diagonal"></div>
+        <div class="team" id="teamanchor">
+            <h2>L'équipe</h2>
+            <hr>
+            <p>Voici les concepteurs ainsi que les organisateurs en charge du projet Tandeem. Nous sommes un groupe
+                composé
+                de spécialistes dans le domaine du marketing, du développement ainsi que du design. N‘hésitez pas à nous
+                contacter, que ce soit pour nous nous laisser des commentaires constructifs, avis, ou bien simplement
+                pour
+                nous dire bonjour !</p>
+            <img src="{{ asset('assets/img/team.png') }}" alt="team">
+        </div>
+        <div class="insta">
+            <h4>Rejoignez-nous sur instagram et partagez vos évènements avec <span class="gradient">#tandeem</span></h4>
+            <!-- SnapWidget -->
+            <iframe src="https://snapwidget.com/embed/169627"></iframe>
+            <p>Restez zen et atteignez votre but ensemble en toute sérenité !</p>
+        </div>
+    </main>
+    {% include 'TandeemBundle:Base:Footer.html.twig' %}
+{% endblock %}

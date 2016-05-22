@@ -1,0 +1,197 @@
+.headerblog {
+  .logo {
+    max-width: 30%;
+    margin: 3% 0;
+    text-align: center;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #5a5a5a;
+  font-family: LatoBold, sans-serif;
+  margin: 2%;
+  cursor: pointer;
+}
+
+.link:hover {
+  border-bottom: 2px solid #f3a6b6;
+}
+
+/*MODAL BOXES*/
+.loginModal, .registerModal, .addVideoModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  textarea {
+    max-width: 200px;
+  }
+
+  input[type=text], input[type=password], input[type=email], textarea {
+    padding: 10px;
+    border: 1px solid #EDEDED;
+    border-radius: 4px;
+    transition: 0.2s ease-out;
+  }
+
+  input[type=submit] {
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background: linear-gradient(to top right, #f3a6b6, #6684c2);
+    color: white;
+    text-transform: uppercase;
+  }
+
+  input[type=submit]:hover, button:hover {
+    box-shadow: 3px 3px 3px #888888;
+  }
+
+  input[type=submit]:active, button:active {
+    box-shadow: inset 0 0 15px #888888;
+  }
+
+}
+
+.loginModalContent p, .registerModalContent p, .addVideoModalContent p {
+  padding: 3%;
+  font-weight: 700;
+}
+
+.loginModalContent, .registerModalContent, .addVideoModalContent {
+  background: white;
+  margin: 15% auto;
+  text-align: center;
+  width: 300px;
+  border-radius: 2px;
+}
+
+.loginModalContent form, .registerModalContent form, .addVideoModalContent form {
+  padding: 10%;
+}
+
+.mainblog {
+  text-align: left;
+  h1 {
+    display: none;
+  }
+  article {
+    margin: 5% 0;
+    > * {
+      margin: 2% 0;
+      padding: 0;
+    }
+    img {
+      width: 100%;
+    }
+    h2 {
+      font-family: Lato, sans-serif;
+      font-size: 2rem;
+    }
+  }
+
+  .events, .categories {
+    border: 1px solid #cdcbcb;
+    h3 {
+      text-transform: uppercase;
+      font-family: Lato, sans-serif;
+      text-align: center;
+      color: #6684c2;
+      background: #bec9e2;
+      margin: 0 30%;
+      padding: 2% 0;
+    }
+  }
+
+  .networksbanners {
+    width: 100%;
+    margin: 4% 0;
+  }
+}
+
+@media (min-width: 641px) {
+  .headerblog {
+    height: 120px;
+    border-bottom: 1px solid #e7e4e4;
+    .logo {
+      max-width: 14%;
+      float: left;
+      padding: 0 10%;
+    }
+    nav {
+      text-align: right;
+      padding: 0 10%;
+      line-height: 120px;
+    }
+  }
+
+  .link {
+    margin: 2%;
+  }
+
+  .link:hover {
+    border-bottom: 2px solid #f3a6b6;
+  }
+
+  .mainblog {
+    text-align: left;
+    padding: 0 10%;
+    h1 {
+      display: block;
+      color: #6684c2;
+      text-transform: uppercase;
+      font-family: LatoBold, sans-serif;
+      font-size: 3rem;
+      margin: 2% 0;
+    }
+    article {
+      margin: 0;
+      width: 100%;
+      clear: both;
+      img {
+        max-width: 49%;
+        min-height: 200px;
+        float: left;
+      }
+      .postinfos {
+        width: 49%;
+        min-height: 200px;
+        float: left;
+        > * {
+          padding: 0;
+          padding-left: 5%;
+        }
+      }
+    }
+
+    .events, .categories {
+      clear: both;
+      border: 1px solid #cdcbcb;
+      h3 {
+        text-transform: uppercase;
+        font-family: Lato, sans-serif;
+        text-align: center;
+        color: #6684c2;
+        background: #bec9e2;
+        margin: 0 30%;
+        padding: 2% 0;
+      }
+    }
+
+    .networksbanners {
+      width: 100%;
+      margin: 4% 0;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+}

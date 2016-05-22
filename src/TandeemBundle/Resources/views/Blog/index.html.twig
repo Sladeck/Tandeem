@@ -1,20 +1,82 @@
 {% extends 'TandeemBundle:Base:Base.html.twig' %}
-    {% block container %}
-    {% for post in posts %}
+    {% block body %}
+            {% if not is_granted('ROLE_ADMIN') %}
+                <header class="headerblog" role="banner">
+                    <a href="{{ path('tandeem_homepage') }}">
+                        <img class="logo" src="{{ asset('assets/img/logos/logoblog.png') }}" alt="logo">
+                    </a>
+                    <nav>
+                        {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
+                            <a class="link" href="{{ path('fos_user_security_logout') }}"
+                               class="logoutLink">Déconnexion</a>
+                        {% else %}
+                            <a class="link" id="loginBtn">Connexion</a>
+                            <a class="link" id="registerBtn">Inscription</a>
+                        {% endif %}
+                    </nav>
+                    <div id="loginModal" class="loginModal">
+                        <div class="loginModalContent">
+                            <p>Connexion</p>
+                            <form action="{{ path("fos_user_security_check") }}" method="post">
+                                <input type="hidden" name="_csrf_token"
+                                       value="{{ fos_csrf_provider.generateCsrfToken('authenticate') }}">
+                                <input type="text" name="_username" placeholder="Pseudo" required="required"
+                                       autofocus><br>
+                                <input type="password" name="_password" placeholder="Mot de passe"
+                                       required="required"><br>
+                                <input type="submit" value="Connexion">
+                            </form>
+                        </div>
+                    </div>
+                    <div id="registerModal" class="registerModal">
+                        <div class="registerModalContent">
+                            <p>Inscription</p>
+                            <form action="{{ path("fos_user_registration_register") }}" method="post">
+                                <input type="hidden" name="fos_user_registration_form[_token]"
+                                       value="{{ csrf_token('registration') }}">
+                                <input type="email" name="fos_user_registration_form[email]" placeholder="Email"
+                                       required="required"><br>
+                                <input type="text" name="fos_user_registration_form[username]" placeholder="Pseudo"
+                                       required="required"><br>
+                                <input type="password" name="fos_user_registration_form[plainPassword][first]"
+                                       placeholder="Mot de passe" required="required"><br>
+                                <input type="password" name="fos_user_registration_form[plainPassword][second]"
+                                       placeholder="Vérification" required="required"><br>
+                                <input type="submit" value="Inscription">
+                            </form>
+                        </div>
+                    </div>
+                </header>
+            {% endif %}
+        <div class="diagonal"></div>
+        <main class="mainblog" role="main">
+            <h1>Le blog</h1>
+            {% for post in posts|reverse %}
+                <article>
+                    <img src="{{ asset('assets/img/articleimg.jpg') }}" alt="article">
+                    <div class="postinfos">
+                        <p>{{ post.date|date("d/m/Y") }}</p>
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.description|truncate(150, true) }}</p>
+                    </div>
+                </article>
+                {#
+                            {% for comment in comments %}
+                                {% if post.id == comment.posts.id %}
+                                    Par {{ comment.user }}<br>
+                                    {{ comment.content }}<br><br>
+                                    Likes : {{ comment.Likes }}<br><br>
+                                {% endif %}
+                            {% endfor %}#}
 
-      {{ post.title }} <br><br>
-      {{ post.description }}<br><br>
-      {{ post.date|date("d/m/Y") }}<br><br><hr width="20%">
-
-        {% for comment in comments %}
-          {% if post.id == comment.posts.id %}
-          Par {{ comment.user }}<br>
-          {{ comment.content }}<br><br>
-          Likes : {{ comment.Likes }}<br><br>
-          {% endif %}
-        {% endfor %}
-
-      <hr>
-
-    {% endfor %}
+            {% endfor %}
+            <div class="events">
+                <h3>évenements</h3>
+            </div>
+            <img class="networksbanners" src="{{ asset('assets/img/networks/banners.png') }}" alt="networks">
+            <div class="categories">
+                <h3>categories</h3>
+            </div>
+        </main>
+        {% include 'TandeemBundle:Base:Footer.html.twig' %}
     {% endblock %}

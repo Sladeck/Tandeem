@@ -1,0 +1,604 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf); }
+@font-face {
+  font-family: LatoBold;
+  src: url(../fonts/Lato-Bold.ttf); }
+@font-face {
+  font-family: LatoLight;
+  src: url(../fonts/Lato-Light.ttf); }
+@font-face {
+  font-family: LatoLightItalic;
+  src: url(../fonts/Lato-LightItalic.ttf); }
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  color: #5a5a5a;
+  text-align: center;
+  font-family: LatoLight, sans-serif;
+  background-color: #fcf9f9; }
+  body p {
+    padding: 0 3%; }
+
+/*HEADER*/
+.headerindex {
+  width: 100%;
+  height: 500px;
+  text-align: center; }
+  .headerindex .headerbackground {
+    background: url("../img/backgrounds/headerbackgroundmobile.jpg") 60% no-repeat;
+    background-size: cover;
+    -webkit-filter: brightness(75%);
+    filter: brightness(75%);
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    left: 0;
+    top: 0; }
+  .headerindex .logo {
+    position: absolute;
+    top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: 30%; }
+  .headerindex nav {
+    display: none; }
+  .headerindex h1 {
+    position: absolute;
+    top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    color: white; }
+  .headerindex p {
+    position: absolute;
+    top: 22%;
+    margin-left: 5%;
+    margin-right: 5%;
+    left: 0;
+    right: 0;
+    color: white; }
+  .headerindex a img {
+    position: absolute;
+    top: 45%;
+    max-width: 35%; }
+  .headerindex a .androidapp {
+    left: 13%; }
+  .headerindex a .appleapp {
+    right: 13%; }
+  .headerindex .downarrow {
+    position: absolute;
+    top: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: 10%; }
+
+.bold {
+  font-weight: bold; }
+
+.gradient {
+  background: -webkit-linear-gradient(#f3a6b6, #6684c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+/*MAIN*/
+.mainindex h2 {
+  font-family: LatoLightItalic, sans-serif;
+  font-size: 3.8rem;
+  margin-top: 5%; }
+.mainindex hr {
+  border: 1px solid #f3a6b6;
+  margin: 5% 30%; }
+.mainindex .presentation p {
+  line-height: 1.5;
+  margin: 0 5%; }
+.mainindex .presentation .second {
+  display: none; }
+.mainindex .presentation .phone {
+  max-width: 40%;
+  margin-top: 5%; }
+.mainindex .presentation a img {
+  max-width: 30%;
+  margin: 5% 0; }
+.mainindex .offers {
+  background-color: #f4f4f4; }
+  .mainindex .offers h3 {
+    text-transform: uppercase;
+    padding: 3%; }
+  .mainindex .offers .fat {
+    font-family: LatoBold, sans-serif;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    margin: 1% 0; }
+  .mainindex .offers button {
+    padding: 18px 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: LatoBold, sans-serif;
+    background: none;
+    border: 1px solid #f3a6b6;
+    border-radius: 12px;
+    color: #848bbf;
+    margin-bottom: 3%; }
+  .mainindex .offers button:hover {
+    background: linear-gradient(to top right, #f3a6b6, #6684c2);
+    color: white; }
+.mainindex .quotebackground {
+  background: url("../img/backgrounds/quotebackgroundmobile.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 170px;
+  display: table-cell;
+  vertical-align: middle; }
+.mainindex blockquote {
+  font-style: italic;
+  color: white; }
+.mainindex .quote {
+  max-width: 7%;
+  margin: 2% 0; }
+.mainindex .team p {
+  line-height: 1.5; }
+.mainindex .team img {
+  max-width: 100%;
+  margin: 5% 0; }
+.mainindex .insta {
+  background: #f4f4f4;
+  text-transform: uppercase;
+  color: black; }
+  .mainindex .insta h4 {
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+    padding: 5% 2%; }
+  .mainindex .insta iframe {
+    border: none;
+    overflow: hidden;
+    width: 100%;
+    height: 150px; }
+  .mainindex .insta p {
+    padding: 2%; }
+
+.diagonal {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to right, #c79bba, #858bbf);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 27%, 0 79%);
+  -moz-clip-path: polygon(0 0, 100% 0, 100% 27%, 0 79%);
+  clip-path: polygon(0 0, 100% 0, 100% 27%, 0 79%); }
+
+.diagonal:nth-of-type(2) {
+  background: linear-gradient(to right, #f3a6b6, #c09aba);
+  -webkit-clip-path: polygon(0 79%, 100% 27%, 100% 100%, 0 100%);
+  clip-path: polygon(0 79%, 100% 27%, 100% 100%, 0 100%);
+  clear: both; }
+
+/*FOOTER*/
+footer {
+  background: #100705;
+  width: 100%;
+  height: 200px;
+  color: white; }
+  footer form {
+    display: none; }
+  footer .logofooter {
+    max-width: 25%;
+    margin: 2% 0; }
+  footer .networks p {
+    margin: 4% 0; }
+  footer .networksicon {
+    margin-left: 3%; }
+
+@media (min-width: 641px) {
+  body {
+    font-size: 1.6rem; }
+    body p, body h2, body blockquote {
+      padding: 0 10%; }
+
+  .headerindex {
+    height: 500px;
+    text-align: center; }
+    .headerindex .headerbackground {
+      background: url("../img/backgrounds/headerbackground.jpg") 60% no-repeat;
+      background-size: cover;
+      -webkit-filter: brightness(75%);
+      filter: brightness(75%);
+      height: 500px; }
+    .headerindex .logo {
+      top: 2%;
+      margin-left: 10%;
+      max-width: 14%; }
+    .headerindex h1 {
+      top: 12%;
+      font-size: 3rem; }
+    .headerindex nav {
+      display: inline;
+      position: absolute;
+      top: 3%;
+      width: 50%; }
+    .headerindex .link {
+      text-decoration: none;
+      color: white;
+      font-family: LatoBold, sans-serif;
+      margin-left: 3%; }
+    .headerindex .link:hover {
+      border-bottom: 2px solid #f3a6b6; }
+    .headerindex p {
+      top: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.9rem; }
+    .headerindex a img {
+      top: 35%;
+      max-width: 20%; }
+    .headerindex a .androidapp {
+      left: 25%; }
+    .headerindex a .appleapp {
+      right: 25%; }
+    .headerindex .downarrow {
+      top: 45%;
+      max-width: 6%; }
+
+  .mainindex h2 {
+    font-size: 3.8rem;
+    margin-top: 5%; }
+  .mainindex hr {
+    margin: 3% 40%; }
+  .mainindex .presentation .divSquare {
+    width: 49%;
+    height: 400px;
+    float: left;
+    margin: 2px; }
+  .mainindex .presentation .first {
+    text-align: left; }
+    .mainindex .presentation .first hr {
+      margin: 5% 70% 5% 10%; }
+  .mainindex .presentation .second {
+    display: block;
+    line-height: 500px; }
+    .mainindex .presentation .second .lotus {
+      max-width: 45%; }
+  .mainindex .presentation .fourth {
+    text-align: right; }
+    .mainindex .presentation .fourth hr {
+      margin: 5% 10% 5% 70%; }
+    .mainindex .presentation .fourth .apps {
+      padding-right: 10%; }
+      .mainindex .presentation .fourth .apps a img {
+        max-width: 30%;
+        margin: 5% 0; }
+  .mainindex .presentation p {
+    margin: inherit; }
+  .mainindex .presentation .phone {
+    margin: 0; }
+  .mainindex .offers h3 {
+    padding: 3%; }
+  .mainindex .offers .fat {
+    margin: 1% 0; }
+  .mainindex .offers .divoffers {
+    width: 50%;
+    height: 150px;
+    float: left;
+    background: inherit; }
+  .mainindex .offers button {
+    padding: 18px 50px;
+    margin-bottom: 3%; }
+  .mainindex .quotebackground {
+    background: url("../img/backgrounds/quotebackground.jpg") no-repeat;
+    background-size: cover;
+    height: 200px; }
+    .mainindex .quotebackground .quote {
+      max-width: 4%; }
+  .mainindex .insta h4 {
+    padding: 3% 2%; }
+  .mainindex .insta p {
+    padding: 1.5%; }
+
+  footer {
+    height: 300px;
+    text-align: right; }
+    footer form {
+      display: block;
+      text-align: left;
+      float: left;
+      padding: 0 10%;
+      margin: 2% 0; }
+      footer form p {
+        padding: 0;
+        font-family: Lato, sans-serif; }
+      footer form input[type="text"], footer form input[type="email"], footer form textarea, footer form input[type="submit"] {
+        border: none;
+        border-radius: 5px;
+        padding-left: 5px;
+        margin: 7px 0;
+        height: 22px;
+        width: 230px;
+        font-style: italic;
+        font-family: LatoLight, sans-serif;
+        background: #FCF9F9;
+        font-size: 1.6rem; }
+      footer form textarea {
+        height: 33px;
+        max-height: 60px; }
+      footer form input[type="submit"] {
+        width: 100px;
+        font-family: Lato, sans-serif;
+        font-style: normal; }
+    footer .logofooter {
+      max-width: 10%;
+      margin: 2% 0;
+      padding: 0 10%; }
+    footer p {
+      padding: 0 10%; }
+    footer .networks {
+      padding: 0 10%; }
+      footer .networks p {
+        padding: 0; } }
+@media (min-width: 1025px) {
+  body {
+    font-size: 1.6rem; }
+    body p, body h2, body blockquote {
+      padding: 0 20%; }
+
+  .headerindex .logo {
+    top: 2%;
+    max-width: 7%; }
+  .headerindex h1 {
+    top: 17%;
+    font-size: 2.6rem; }
+  .headerindex p {
+    top: 27%; }
+  .headerindex a img {
+    top: 50%;
+    max-width: 10%; }
+  .headerindex a .androidapp {
+    left: 38%; }
+  .headerindex a .appleapp {
+    right: 38%; }
+  .headerindex .downarrow {
+    top: 70%;
+    max-width: 3%; }
+
+  .mainindex h2 {
+    font-size: 3.5rem; }
+  .mainindex hr {
+    margin: 2% 45%; }
+  .mainindex .presentation .divSquare {
+    height: 455px; }
+  .mainindex .presentation .first hr {
+    margin: 5% 50% 5% 20%; }
+  .mainindex .presentation .second .lotus {
+    max-width: 30%; }
+  .mainindex .presentation .fourth hr {
+    margin: 5% 20% 5% 50%; }
+  .mainindex .presentation .fourth .apps {
+    padding-right: 20%; }
+  .mainindex .presentation a img {
+    max-width: 25%;
+    margin: 5% 0; }
+  .mainindex .offers h3 {
+    padding: 3%; }
+  .mainindex .offers .fat {
+    margin: 1% 0; }
+  .mainindex .quotebackground {
+    height: 300px; }
+    .mainindex .quotebackground .quote {
+      max-width: 3%; }
+  .mainindex .team img {
+    margin: 3% 0;
+    max-width: 70%; }
+  .mainindex .insta h4 {
+    padding: 3% 2%; }
+  .mainindex .insta p {
+    padding: 1.5%; }
+  .mainindex .diagonal {
+    height: 30px; }
+
+  footer {
+    height: 300px; }
+    footer .logofooter {
+      max-width: 6%; }
+    footer p {
+      padding: 0 10%; } }
+.headerblog .logo {
+  max-width: 30%;
+  margin: 3% 0;
+  text-align: center; }
+
+.link {
+  text-decoration: none;
+  color: #5a5a5a;
+  font-family: LatoBold, sans-serif;
+  margin: 2%;
+  cursor: pointer; }
+
+.link:hover {
+  border-bottom: 2px solid #f3a6b6; }
+
+/*MODAL BOXES*/
+.loginModal, .registerModal, .addVideoModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .loginModal textarea, .registerModal textarea, .addVideoModal textarea {
+    max-width: 200px; }
+  .loginModal input[type=text], .loginModal input[type=password], .loginModal input[type=email], .loginModal textarea, .registerModal input[type=text], .registerModal input[type=password], .registerModal input[type=email], .registerModal textarea, .addVideoModal input[type=text], .addVideoModal input[type=password], .addVideoModal input[type=email], .addVideoModal textarea {
+    padding: 10px;
+    border: 1px solid #EDEDED;
+    border-radius: 4px;
+    transition: 0.2s ease-out; }
+  .loginModal input[type=submit], .registerModal input[type=submit], .addVideoModal input[type=submit] {
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background: linear-gradient(to top right, #f3a6b6, #6684c2);
+    color: white;
+    text-transform: uppercase; }
+  .loginModal input[type=submit]:hover, .loginModal button:hover, .registerModal input[type=submit]:hover, .registerModal button:hover, .addVideoModal input[type=submit]:hover, .addVideoModal button:hover {
+    box-shadow: 3px 3px 3px #888888; }
+  .loginModal input[type=submit]:active, .loginModal button:active, .registerModal input[type=submit]:active, .registerModal button:active, .addVideoModal input[type=submit]:active, .addVideoModal button:active {
+    box-shadow: inset 0 0 15px #888888; }
+
+.loginModalContent p, .registerModalContent p, .addVideoModalContent p {
+  padding: 3%;
+  font-weight: 700; }
+
+.loginModalContent, .registerModalContent, .addVideoModalContent {
+  background: white;
+  margin: 15% auto;
+  text-align: center;
+  width: 300px;
+  border-radius: 2px; }
+
+.loginModalContent form, .registerModalContent form, .addVideoModalContent form {
+  padding: 10%; }
+
+.mainblog {
+  text-align: left; }
+  .mainblog h1 {
+    display: none; }
+  .mainblog article {
+    margin: 5% 0; }
+    .mainblog article > * {
+      margin: 2% 0;
+      padding: 0; }
+    .mainblog article img {
+      width: 100%; }
+    .mainblog article h2 {
+      font-family: Lato, sans-serif;
+      font-size: 2rem; }
+  .mainblog .events, .mainblog .categories {
+    border: 1px solid #cdcbcb; }
+    .mainblog .events h3, .mainblog .categories h3 {
+      text-transform: uppercase;
+      font-family: Lato, sans-serif;
+      text-align: center;
+      color: #6684c2;
+      background: #bec9e2;
+      margin: 0 30%;
+      padding: 2% 0; }
+  .mainblog .networksbanners {
+    width: 100%;
+    margin: 4% 0; }
+
+@media (min-width: 641px) {
+  .headerblog {
+    height: 120px;
+    border-bottom: 1px solid #e7e4e4; }
+    .headerblog .logo {
+      max-width: 14%;
+      float: left;
+      padding: 0 10%; }
+    .headerblog nav {
+      text-align: right;
+      padding: 0 10%;
+      line-height: 120px; }
+
+  .link {
+    margin: 2%; }
+
+  .link:hover {
+    border-bottom: 2px solid #f3a6b6; }
+
+  .mainblog {
+    text-align: left;
+    padding: 0 10%; }
+    .mainblog h1 {
+      display: block;
+      color: #6684c2;
+      text-transform: uppercase;
+      font-family: LatoBold, sans-serif;
+      font-size: 3rem;
+      margin: 2% 0; }
+    .mainblog article {
+      margin: 0;
+      width: 100%;
+      clear: both; }
+      .mainblog article img {
+        max-width: 49%;
+        min-height: 200px;
+        float: left; }
+      .mainblog article .postinfos {
+        width: 49%;
+        min-height: 200px;
+        float: left; }
+        .mainblog article .postinfos > * {
+          padding: 0;
+          padding-left: 5%; }
+    .mainblog .events, .mainblog .categories {
+      clear: both;
+      border: 1px solid #cdcbcb; }
+      .mainblog .events h3, .mainblog .categories h3 {
+        text-transform: uppercase;
+        font-family: Lato, sans-serif;
+        text-align: center;
+        color: #6684c2;
+        background: #bec9e2;
+        margin: 0 30%;
+        padding: 2% 0; }
+    .mainblog .networksbanners {
+      width: 100%;
+      margin: 4% 0; } }
+
+/*# sourceMappingURL=style.css.map */

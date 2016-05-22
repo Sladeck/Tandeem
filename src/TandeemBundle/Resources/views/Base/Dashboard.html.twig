@@ -1,19 +1,21 @@
 {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
-  {% if is_granted('ROLE_ADMIN') %}
+    {% if is_granted('ROLE_ADMIN') %}
+        {% block body %}
+            <div class="dashboard">
+                <h1>DASHBOARD</h1><br><br>
+                <ul>
+                    <li><a class="link" href="{{ path('tandeem_homepage') }}">Accueil</a></li>
+                    <li><a class="link" href="{{ path('Blog') }}">Blog</a></li>
 
-    <div class="dashboard">
-      <h1>DASHBOARD</h1><br><br>
-      <ul>
-        <li><a href="/"><span>Accueil</span></a></li>
-        <li><a href="/Posts"><span>Articles</span></a>
-          <ul>
-              <li><a href="/CreatePosts"><span>Créer un Article</span></a></li>
-          </ul>
-        </li>
-        <li><a href=""><span>Utilisateurs<span></a></li>
-      </ul>
-
-    </div>
-
-  {% endif %}
+                    <li><a class="link" href="{{ path('Show_Posts') }}">Articles</a>
+                        <ul>
+                            <li><a class="link" href="{{ path('Create_Posts') }}">Créer un Article</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="link" href="">Utilisateurs</a></li>
+                    <li><a class="link" href="{{ path('fos_user_security_logout') }}" class="logoutLink">Déconnexion</a></li>
+                </ul>
+            </div>
+        {% endblock %}
+    {% endif %}
 {% endif %}

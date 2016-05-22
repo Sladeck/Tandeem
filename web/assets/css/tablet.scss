@@ -1,0 +1,208 @@
+@media (min-width: 641px) {
+
+  body {
+    font-size: 1.6rem;
+    p, h2, blockquote {
+      padding: 0 10%;
+    }
+  }
+
+  .headerindex {
+    height: 500px;
+    text-align: center;
+    .headerbackground {
+      background: url("../img/backgrounds/headerbackground.jpg") 60% no-repeat;
+      background-size: cover;
+      -webkit-filter: brightness(75%);
+      filter: brightness(75%);
+      height: 500px;
+    }
+    .logo {
+      top: 2%;
+      margin-left: 10%;
+      max-width: 14%;
+    }
+    h1 {
+      top: 12%;
+      font-size: 3rem;
+    }
+    nav {
+      display: inline;
+      position: absolute;
+      top: 3%;
+      width: 50%;
+    }
+    .link {
+      text-decoration: none;
+      color: white;
+      font-family: LatoBold, sans-serif;
+      margin-left: 3%;
+    }
+    .link:hover {
+      border-bottom: 2px solid #f3a6b6;
+    }
+    p {
+      top: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.9rem;
+    }
+    a {
+      img {
+        top: 35%;
+        max-width: 20%;
+      }
+      .androidapp {
+        left: 25%;
+      }
+      .appleapp {
+        right: 25%;
+      }
+    }
+    .downarrow {
+      top: 45%;
+      max-width: 6%;
+    }
+  }
+
+  .mainindex {
+    h2 {
+      font-size: 3.8rem;
+      margin-top: 5%;
+    }
+    hr {
+      margin: 3% 40%;
+    }
+    .presentation {
+      .divSquare {
+        width: 49%;
+        height: 400px;
+        float: left;
+        margin: 2px;
+      }
+      .first {
+        text-align: left;
+        hr {
+          margin: 5% 70% 5% 10%;
+        }
+      }
+      .second {
+        display: block;
+        line-height: 500px;
+        .lotus {
+          max-width: 45%;
+        }
+      }
+      .fourth {
+        text-align: right;
+        hr {
+          margin: 5% 10% 5% 70%;
+        }
+        .apps {
+          padding-right: 10%;
+          a {
+            img {
+              max-width: 30%;
+              margin: 5% 0;
+            }
+          }
+
+        }
+      }
+      p {
+        margin: inherit;
+      }
+      .phone {
+        margin: 0;
+      }
+
+    }
+
+    .offers {
+      h3 {
+        padding: 3%;
+      }
+      .fat {
+        margin: 1% 0;
+      }
+      .divoffers {
+        width: 50%;
+        height: 150px;
+        float: left;
+        background: inherit;
+      }
+      button {
+        padding: 18px 50px;
+        margin-bottom: 3%;
+      }
+    }
+
+    .quotebackground {
+      background: url("../img/backgrounds/quotebackground.jpg") no-repeat;
+      background-size: cover;
+      height: 200px;
+      .quote {
+        max-width: 4%;
+      }
+    }
+
+    .insta {
+      h4 {
+        padding: 3% 2%;
+      }
+      p {
+        padding: 1.5%;
+      }
+    }
+  }
+  footer {
+    height: 300px;
+    text-align: right;
+    form {
+      display: block;
+      text-align: left;
+      float: left;
+      padding: 0 10%;
+      margin: 2% 0;
+      p {
+        padding: 0;
+        font-family: Lato, sans-serif;
+      }
+      input[type="text"], input[type="email"], textarea, input[type="submit"] {
+        border: none;
+        border-radius: 5px;
+        padding-left: 5px;
+        margin: 7px 0;
+        height: 22px;
+        width: 230px;
+        font-style: italic;
+        font-family: LatoLight, sans-serif;
+        background: #FCF9F9;
+        font-size: 1.6rem;
+      }
+      textarea {
+        height: 33px;
+        max-height: 60px;
+      }
+      input[type="submit"]{
+        width: 100px;
+        font-family: Lato, sans-serif;
+        font-style: normal;
+      }
+    }
+    .logofooter {
+      max-width: 10%;
+      margin: 2% 0;
+      padding: 0 10%;
+    }
+    p {
+      padding: 0 10%;
+    }
+    .networks {
+      padding: 0 10%;
+      p {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
 {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
   {% if is_granted('ROLE_ADMIN') %}
 
-    {% block container %}
+    {% block body %}
 
     <form id="create" method="post">
       <input type="text" name="title" placeholder="Title" required><br><br>

@@ -1,0 +1,246 @@
+@import "reset";
+@import "fonts";
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #5a5a5a;
+  text-align: center;
+  font-family: LatoLight, sans-serif;
+  background-color: #fcf9f9;
+  p {
+    padding: 0 3%;
+  }
+}
+
+/*HEADER*/
+.headerindex {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  .headerbackground {
+    background: url("../img/backgrounds/headerbackgroundmobile.jpg") 60% no-repeat;
+    background-size: cover;
+    -webkit-filter: brightness(75%);
+    filter: brightness(75%);
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    left: 0;
+    top: 0;
+  }
+  .logo {
+    position: absolute;
+    top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: 30%;
+  }
+  nav {
+    display: none;
+  }
+  h1 {
+    position: absolute;
+    top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    color: white;
+  }
+  p {
+    position: absolute;
+    top: 22%;
+    margin-left: 5%;
+    margin-right: 5%;
+    left: 0;
+    right: 0;
+    color: white;
+  }
+  a {
+    img {
+      position: absolute;
+      top: 45%;
+      max-width: 35%;
+    }
+    .androidapp {
+      left: 13%;
+    }
+    .appleapp {
+      right: 13%;
+    }
+  }
+  .downarrow {
+    position: absolute;
+    top: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: 10%;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.gradient {
+  background: -webkit-linear-gradient(#f3a6b6, #6684c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*MAIN*/
+.mainindex {
+  h2 {
+    font-family: LatoLightItalic, sans-serif;
+    font-size: 3.8rem;
+    margin-top: 5%;
+  }
+  hr {
+    border: 1px solid #f3a6b6;
+    margin: 5% 30%;
+  }
+  .presentation {
+    p {
+      line-height: 1.5;
+      margin: 0 5%;
+    }
+    .second {
+      display: none;
+    }
+    .phone {
+      max-width: 40%;
+      margin-top: 5%;
+    }
+    a {
+      img {
+        max-width: 30%;
+        margin: 5% 0;
+      }
+    }
+  }
+  .offers {
+    background-color: #f4f4f4;
+    h3 {
+      text-transform: uppercase;
+      padding: 3%;
+    }
+    .fat {
+      font-family: LatoBold, sans-serif;
+      text-transform: uppercase;
+      font-size: 2.7rem;
+      margin: 1% 0;
+    }
+    button {
+      padding: 18px 50px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-family: LatoBold, sans-serif;
+      background: none;
+      border: 1px solid #f3a6b6;
+      border-radius: 12px;
+      color: #848bbf;
+      margin-bottom: 3%;
+    }
+    button:hover {
+      background: linear-gradient(to top right, #f3a6b6, #6684c2);
+      color: white;
+    }
+  }
+  .quotebackground {
+    background: url("../img/backgrounds/quotebackgroundmobile.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 170px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  blockquote {
+    font-style: italic;
+    color: white;
+  }
+  .quote {
+    max-width: 7%;
+    margin: 2% 0;
+  }
+  .team {
+    p {
+      line-height: 1.5;
+    }
+    img {
+      max-width: 100%;
+      margin: 5% 0;
+    }
+  }
+  .insta {
+    background: #f4f4f4;
+    text-transform: uppercase;
+    color: black;
+    h4 {
+      font-family: Lato, sans-serif;
+      font-weight: bold;
+      padding: 5% 2%;
+    }
+    iframe {
+      border: none;
+      overflow: hidden;
+      width: 100%;
+      height: 150px;
+    }
+    p {
+      padding: 2%;
+    }
+  }
+}
+
+.diagonal {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to right, #c79bba, #858bbf);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 27%, 0 79%);
+  -moz-clip-path: polygon(0 0, 100% 0, 100% 27%, 0 79%);
+  clip-path: polygon(0 0, 100% 0, 100% 27%, 0 79%);
+}
+
+.diagonal:nth-of-type(2) {
+  background: linear-gradient(to right, #f3a6b6, #c09aba);
+  -webkit-clip-path: polygon(0 79%, 100% 27%, 100% 100%, 0 100%);
+  clip-path: polygon(0 79%, 100% 27%, 100% 100%, 0 100%);
+  clear: both;
+}
+
+/*FOOTER*/
+footer {
+  background: #100705;
+  width: 100%;
+  height: 200px;
+  color: white;
+  form {
+    display: none;
+  }
+  .logofooter {
+    max-width: 25%;
+    margin: 2% 0;
+  }
+  .networks {
+    p {
+      margin: 4% 0;
+    }
+  }
+  .networksicon {
+    margin-left: 3%;
+  }
+}
+
+@import "tablet";
+@import "desktop";
+@import "blog";

@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tandeem</title>
-    {% block javascript %}
-    <script src="{{ asset('assets/jquery-2.2.3.min.js') }}"></script>
-    <script src="{{ asset('assets/action.js') }}"></script>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Tandeem{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" media="all"/>
     {% endblock %}
-  </head>
+    {% block javascript %}
+        <script src="{{ asset('assets/js/jquery-2.2.3.min.js') }}"></script>
+        <script src="{{ asset('assets/js/action.js') }}"></script>
+        <script src="{{ asset('assets/js/user_script.js') }}"></script>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}"/>
+</head>

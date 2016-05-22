@@ -1,0 +1,114 @@
+@media (min-width: 1025px) {
+  body {
+    font-size: 1.6rem;
+    p, h2, blockquote {
+      padding: 0 20%;
+    }
+  }
+  .headerindex {
+    .logo {
+      top: 2%;
+      max-width: 7%;
+    }
+    h1 {
+      top: 17%;
+      font-size: 2.6rem;
+    }
+    p {
+      top: 27%;
+    }
+    a {
+      img {
+        top: 50%;
+        max-width: 10%;
+      }
+      .androidapp {
+        left: 38%;
+      }
+      .appleapp {
+        right: 38%;
+      }
+    }
+    .downarrow {
+      top: 70%;
+      max-width: 3%;
+    }
+  }
+  .mainindex {
+    h2 {
+      font-size: 3.5rem;
+    }
+    hr {
+      margin: 2% 45%;
+    }
+    .presentation {
+      .divSquare {
+        height: 455px;
+      }
+      .first {
+        hr {
+          margin: 5% 50% 5% 20%;
+        }
+      }
+      .second {
+        .lotus {
+          max-width: 30%;
+        }
+      }
+      .fourth {
+        hr {
+          margin: 5% 20% 5% 50%;
+        }
+        .apps {
+          padding-right: 20%;
+        }
+      }
+      a {
+        img {
+          max-width: 25%;
+          margin: 5% 0;
+        }
+      }
+    }
+    .offers {
+      h3 {
+        padding: 3%;
+      }
+      .fat {
+        margin: 1% 0;
+      }
+    }
+    .quotebackground {
+      height: 300px;
+      .quote {
+        max-width: 3%;
+      }
+    }
+    .team {
+      img {
+        margin: 3% 0;
+        max-width: 70%;
+      }
+    }
+    .insta {
+      h4 {
+        padding: 3% 2%;
+      }
+      p {
+        padding: 1.5%;
+      }
+    }
+    .diagonal {
+      height: 30px;
+    }
+  }
+  footer {
+    height: 300px;
+    .logofooter {
+      max-width: 6%;
+    }
+    p {
+      padding: 0 10%;
+    }
+  }
+}
