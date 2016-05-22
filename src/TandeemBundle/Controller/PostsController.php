@@ -10,11 +10,14 @@ use EntityBundle\Entity\User;
 
 class PostsController extends Controller
 {
+
+  /******************************* DEFAULT VIEW ******************************************/
   public function indexAction()
   {
     return $this->render('TandeemBundle:Blog:CreatePosts.html.twig');
   }
 
+  /******************************** SHOW POSTS ********************************************/
   public function showAction()
   {
     $posts = $this->getDoctrine()
@@ -24,6 +27,7 @@ class PostsController extends Controller
     return $this->render('TandeemBundle:Blog:ShowPosts.html.twig', array("posts"=> $posts));
   }
 
+  /********************************* CREATE A POST ADMIN DASHBOARD *************************/
   public function createAction(Request $infos)
   {
     $post = new Posts();
@@ -49,6 +53,7 @@ class PostsController extends Controller
       return new Response($json);
   }
 
+  /****************************** DELETE ONE POST ADMIN DASHBOARD **********************/
   public function deleteAction(Request $infos)
   {
     $id = $infos->get("id");
@@ -60,6 +65,23 @@ class PostsController extends Controller
     $jsondelete = json_encode(Array("id"=>$id));
 
     return new Response($jsondelete);
+  }
+
+/******************************* SHOW ONE POST **************************************/
+  public function showOneAction($id)
+  {
+
+    $post = $this->getDoctrine()
+      ->getRepository('EntityBundle:Posts')
+      ->findById($id);
+
+    $comments = $this->getDoctrine()
+      ->getRepository('EntityBundle:Comments')
+      ->findByposts($id);
+
+
+  return $this->render('TandeemBundle:Blog:ShowOnePost.html.twig', array("post"=>$post, "comments"=>$comments));
+
   }
 
 }

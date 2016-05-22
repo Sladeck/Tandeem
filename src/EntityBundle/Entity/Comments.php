@@ -34,7 +34,7 @@ class Comments
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -57,7 +57,7 @@ class Comments
     /**
      * Get content
      *
-     * @return string 
+     * @return string
      */
     public function getContent()
     {
@@ -80,7 +80,7 @@ class Comments
     /**
      * Get likes
      *
-     * @return integer 
+     * @return integer
      */
     public function getLikes()
     {
@@ -103,12 +103,14 @@ class Comments
     /**
      * Get user
      *
-     * @return \EntityBundle\Entity\User 
+     * @return \EntityBundle\Entity\User
      */
     public function getUser()
     {
         return $this->user;
     }
+
+
     /**
      * @var \EntityBundle\Entity\Posts
      */
@@ -131,7 +133,7 @@ class Comments
     /**
      * Get posts
      *
-     * @return \EntityBundle\Entity\Posts 
+     * @return \EntityBundle\Entity\Posts
      */
     public function getPosts()
     {

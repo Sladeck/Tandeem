@@ -21,3 +21,15 @@ Upload_Posts:
 Delete_Posts:
     path: /Post/delete
     defaults: { _controller: TandeemBundle:Posts:delete }
+
+Post:
+    path: /Post/{id}
+    defaults: { _controller: TandeemBundle:Posts:showOne }
+
+Create_Comments:
+    path: /Comments/Create
+    defaults: { _controller: TandeemBundle:Comments:createComments }
+
+Delete_Comments:
+    path: /Comments/Delete
+    defaults: { _controller: TandeemBundle:Comments:delete }

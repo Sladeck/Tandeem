@@ -1,0 +1,41 @@
+{% include 'TandeemBundle:Base:Base.html.twig' %}
+
+{% block container %}
+
+  {% for content in post %}<br><br>
+    {{ content.title }}<br><br>
+    {{ content.description }}
+
+    <div class="Comments">
+      <br><br><h1>Commentaires :</h1>
+
+        {% for comment in comments %}<br>
+
+          <div id="{{ comment.id }}">
+
+            {{ comment.user.username }}<br><br>
+            {{ comment.content }}
+
+              {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
+                {% if (is_granted('ROLE_ADMIN')) or ((comment.user.username) == (app.user.username)) %}
+
+                <form class="deleteComment" method="post">
+                  <input type="hidden" name="id" value="{{ comment.id }}">
+                  <input type="submit" name="delete" value="Supprimer">
+                </form>
+
+
+                {% endif %}
+              {% endif %}
+          </div>
+        {% endfor %}
+      </div><br><br>
+
+    <form class="createComment" method="post">
+      <input type="hidden" name="idPost" value="{{ content.id }}">
+      <textarea name="content" rows="8" cols="40" id="textar"></textarea>
+      <input type="submit" name="validComment" value="Poster">
+    </form>
+  {% endfor %}
+
+{% endblock %}

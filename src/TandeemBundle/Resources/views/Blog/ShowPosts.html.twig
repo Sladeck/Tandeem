@@ -16,6 +16,9 @@
               {{ post.date|date("d/m/Y") }}
             </td>
             <td>
+              <a href="/Post/{{ post.id }}"><input type="button" name="Redirect" value="Afficher"></a>
+            </td>
+            <td>
               <form class="delete" method="post">
                 <input type="hidden" name="id" value="{{ post.id }}">
                 <input type="submit" name="deletePost" value="Supprimer">

@@ -35,4 +35,47 @@ $(function() {
   return false;
   });
 
+  $('.createComment').submit(function (){
+      var data = $(this).serialize();
+      $.ajax({
+        url: '/Comments/Create',
+        type: 'POST',
+        data: data,
+        dataType: 'json',
+        success: function (data) {
+
+          $('.Comments').append(
+            '<div id="'+data.id+'">'+
+            data.user+'<br><br>'+
+            data.content+'<br><br>'+
+            '<form class="deleteComment" method="post">'+
+              '<input type="hidden" name="id" value="'+data.id+'">'+
+              '<input type="submit" name="delete" value="Supprimer">'+
+            '</form>'+
+            '</div>'
+          );
+        }
+      });
+
+  return false;
+  });
+
+
+  $('.deleteComment').submit(function (){
+      var data = $(this).serialize();
+      $.ajax({
+        url: '/Comments/Delete',
+        type: 'POST',
+        data: data,
+        dataType: 'json',
+        success: function (data) {
+          var selector = '#'+data.id;
+          $(selector).remove();
+        }
+      });
+
+  return false;
+  });
+
+
 });
