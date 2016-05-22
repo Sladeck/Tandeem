@@ -18,8 +18,8 @@
 
                 {% for comment in comments %}
                     <div id="{{ comment.id }}">
-                        {{ comment.user.username }}<br><br>
-                        {{ comment.content }}
+                        <p>{{ comment.user.username }}</p>
+                        <p>{{ comment.content }}</p>
                         {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
                             {% if (is_granted('ROLE_ADMIN')) or ((comment.user.username) == (app.user.username)) %}
                                 <form class="deleteComment" method="post">
