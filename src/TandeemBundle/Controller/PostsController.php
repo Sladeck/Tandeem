@@ -34,10 +34,13 @@ class PostsController extends Controller
 
     $title = $infos->get("title");
     $description = $infos->get("description");
-    $post->setDate(new \DateTime(date('Y-m-d H:i:s')));
+    $image = $infos->get("image");
 
+
+    $post->setDate(new \DateTime(date('Y-m-d H:i:s')));
     $post->setTitle($title);
     $post->setDescription($description);
+    $post->setImage($image);
 
     $em = $this->getDoctrine()->getManager();
      $em->persist($post);

@@ -44,7 +44,7 @@ $(function() {
         dataType: 'json',
         success: function (data) {
 
-          $('.Comments').append(
+          $('.comments').append(
             '<div id="'+data.id+'">'+
             data.user+'<br><br>'+
             data.content+'<br><br>'+

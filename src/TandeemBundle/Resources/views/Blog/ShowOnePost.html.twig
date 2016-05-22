@@ -9,7 +9,7 @@
             <article>
                 <h2>{{ content.title }}</h2>
                 <p>{{ content.date|date("d/m/Y") }}</p>
-                <img src="{{ asset('assets/img/articleimg.jpg') }}" alt="article">
+                <img src="{{ content.image }}" alt="article">
                 <p>{{ content.description }}</p>
             </article>
 

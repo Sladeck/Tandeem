@@ -20,4 +20,8 @@ EntityBundle\Entity\Posts:
         date:
             type: date
             column: Date
+        image:
+            type: string
+            length: '510'
+            column: images
     lifecycleCallbacks: {  }
