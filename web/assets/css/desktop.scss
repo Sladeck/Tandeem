@@ -7,7 +7,7 @@
   }
   .headerindex {
     height: 38vw;
-    .headerbackground{
+    .headerbackground {
       height: 38vw;
     }
     .logo {
@@ -81,6 +81,15 @@
       .fat {
         margin: 1% 0;
       }
+      .premiummodal {
+        .premiummodal-content {
+          margin: 10% auto;
+          img {
+            width: 60%;
+          }
+        }
+      }
+
     }
     .quotebackground {
       height: 300px;
