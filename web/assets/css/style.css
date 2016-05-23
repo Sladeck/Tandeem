@@ -94,6 +94,45 @@ body {
     max-width: 30%; }
   .headerindex nav {
     display: none; }
+  .headerindex #sidebar {
+    background: linear-gradient(to top, #f3a6b6, #6684c2);
+    width: 200px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: -200px;
+    top: 0;
+    transition: left 0.3s linear;
+    z-index: 100; }
+    .headerindex #sidebar li {
+      margin-top: 10%; }
+    .headerindex #sidebar .link {
+      color: white;
+      font-family: Lato, sans-serif;
+      text-transform: uppercase; }
+    .headerindex #sidebar #sidebar-btn {
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 15px;
+      cursor: pointer;
+      margin: 20px;
+      position: absolute;
+      top: 0;
+      right: -60px; }
+      .headerindex #sidebar #sidebar-btn span {
+        height: 2px;
+        background: white;
+        margin-bottom: 5px;
+        display: block; }
+      .headerindex #sidebar #sidebar-btn span:nth-child(2) {
+        width: 50%; }
+      .headerindex #sidebar #sidebar-btn span:nth-child(3) {
+        width: 100%; }
+  .headerindex #sidebar.visible {
+    left: 0;
+    transition: left 0.3s linear;
+    position: fixed; }
   .headerindex h1 {
     position: absolute;
     top: 15%;
@@ -271,6 +310,8 @@ footer {
       position: absolute;
       top: 3%;
       width: 50%; }
+    .headerindex #sidebar {
+      display: none; }
     .headerindex .link {
       text-decoration: none;
       color: white;
