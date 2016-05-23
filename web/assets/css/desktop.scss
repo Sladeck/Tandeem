@@ -107,12 +107,17 @@
     }
   }
   footer {
-    height: 320px;
-    .logofooter {
-      max-width: 6%;
+    height: 290px;
+    .footerdiv {
+      max-height: 280px;
     }
     p {
       padding: 0 10%;
+    }
+    .networks {
+      p {
+
+      }
     }
   }
 }

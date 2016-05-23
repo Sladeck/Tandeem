@@ -159,12 +159,17 @@
     }
   }
   footer {
-    height: 300px;
     text-align: right;
-    form {
-      display: block;
-      text-align: left;
+    .footerdiv:first-of-type {
+      display: inline-block;
+    }
+    .footerdiv {
+      width: 50%;
       float: left;
+      max-height: 240px;
+    }
+    form {
+      text-align: left;
       padding: 0 10%;
       margin: 2% 0;
       p {
@@ -194,7 +199,7 @@
       }
     }
     .logofooter {
-      max-width: 10%;
+      max-width: 15%;
       margin: 2% 0;
       padding: 0 10%;
     }
