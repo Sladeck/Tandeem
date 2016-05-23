@@ -1,0 +1,72 @@
+@media (min-width: 1025px) {
+  body {
+    font-size: 1.6rem; }
+    body p, body h2, body blockquote {
+      padding: 0 20%; }
+
+  .headerindex {
+    height: 38vw; }
+    .headerindex .headerbackground {
+      height: 38vw; }
+    .headerindex .logo {
+      top: 2%;
+      max-width: 7%; }
+    .headerindex h1 {
+      top: 17%;
+      font-size: 2.6rem; }
+    .headerindex p {
+      top: 27%; }
+    .headerindex a img {
+      top: 22vw;
+      max-width: 10%; }
+    .headerindex a .androidapp {
+      left: 38%; }
+    .headerindex a .appleapp {
+      right: 38%; }
+    .headerindex .downarrow {
+      top: 32vw;
+      max-width: 3%; }
+
+  .mainindex h2 {
+    font-size: 3.5rem; }
+  .mainindex hr {
+    margin: 2% 45%; }
+  .mainindex .presentation .divSquare {
+    height: 455px; }
+  .mainindex .presentation .first hr {
+    margin: 5% 50% 5% 20%; }
+  .mainindex .presentation .second .lotus {
+    max-width: 30%; }
+  .mainindex .presentation .fourth hr {
+    margin: 5% 20% 5% 50%; }
+  .mainindex .presentation .fourth .apps {
+    padding-right: 20%; }
+  .mainindex .presentation a img {
+    max-width: 25%;
+    margin: 5% 0; }
+  .mainindex .offers h3 {
+    padding: 3%; }
+  .mainindex .offers .fat {
+    margin: 1% 0; }
+  .mainindex .quotebackground {
+    height: 300px; }
+    .mainindex .quotebackground .quote {
+      max-width: 3%; }
+  .mainindex .team img {
+    margin: 3% 0;
+    max-width: 70%; }
+  .mainindex .insta h4 {
+    padding: 3% 2%; }
+  .mainindex .insta p {
+    padding: 1.5%; }
+  .mainindex .diagonal {
+    height: 30px; }
+
+  footer {
+    height: 320px; }
+    footer .logofooter {
+      max-width: 6%; }
+    footer p {
+      padding: 0 10%; } }
+
+/*# sourceMappingURL=desktop.css.map */

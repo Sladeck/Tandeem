@@ -1,0 +1,239 @@
+.headerblog .logo {
+  max-width: 30%;
+  margin: 3% 0;
+  text-align: center; }
+
+.link {
+  text-decoration: none;
+  color: #5a5a5a;
+  font-family: LatoBold, sans-serif;
+  margin: 2%;
+  cursor: pointer; }
+
+.link:hover {
+  border-bottom: 2px solid #f3a6b6; }
+
+/*MODAL BOXES*/
+.loginModal, .registerModal, .addVideoModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .loginModal textarea, .registerModal textarea, .addVideoModal textarea {
+    max-width: 200px; }
+  .loginModal input[type=text], .loginModal input[type=password], .loginModal input[type=email], .loginModal textarea, .registerModal input[type=text], .registerModal input[type=password], .registerModal input[type=email], .registerModal textarea, .addVideoModal input[type=text], .addVideoModal input[type=password], .addVideoModal input[type=email], .addVideoModal textarea {
+    padding: 10px;
+    border: 1px solid #EDEDED;
+    border-radius: 4px;
+    transition: 0.2s ease-out; }
+  .loginModal input[type=submit], .registerModal input[type=submit], .addVideoModal input[type=submit] {
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background: linear-gradient(to top right, #f3a6b6, #6684c2);
+    color: white;
+    text-transform: uppercase; }
+  .loginModal input[type=submit]:hover, .loginModal button:hover, .registerModal input[type=submit]:hover, .registerModal button:hover, .addVideoModal input[type=submit]:hover, .addVideoModal button:hover {
+    box-shadow: 3px 3px 3px #888888; }
+  .loginModal input[type=submit]:active, .loginModal button:active, .registerModal input[type=submit]:active, .registerModal button:active, .addVideoModal input[type=submit]:active, .addVideoModal button:active {
+    box-shadow: inset 0 0 15px #888888; }
+
+.loginModalContent p, .registerModalContent p {
+  padding: 3%;
+  font-weight: 700; }
+
+.loginModalContent, .registerModalContent {
+  background: white;
+  margin: 15% auto;
+  text-align: center;
+  width: 300px;
+  border-radius: 2px; }
+
+.loginModalContent form, .registerModalContent form {
+  padding: 10%; }
+
+.mainblog {
+  /*KEYFRAMES*/
+  text-align: left; }
+  .mainblog h1 {
+    display: none; }
+  .mainblog article {
+    margin: 5% 0; }
+    .mainblog article > * {
+      margin: 2% 0;
+      padding: 0; }
+    .mainblog article img {
+      width: 100%; }
+    .mainblog article a {
+      color: inherit;
+      text-decoration: none; }
+    .mainblog article h2 {
+      padding: 0;
+      padding-left: 3%;
+      font-family: Lato, sans-serif;
+      font-size: 2rem; }
+  .mainblog .events, .mainblog .categories {
+    border: 1px solid #cdcbcb; }
+    .mainblog .events h3, .mainblog .categories h3 {
+      text-transform: uppercase;
+      font-family: Lato, sans-serif;
+      text-align: center;
+      color: #6684c2;
+      background: #bec9e2;
+      margin: 0 30%;
+      padding: 2% 0; }
+  .mainblog .networksbanners {
+    width: 100%;
+    margin: 4% 0; }
+
+.onepost {
+  text-align: left;
+  padding: 5%; }
+  .onepost article {
+    margin: 3%; }
+    .onepost article img {
+      width: 100%; }
+  .onepost h2 {
+    padding: 0;
+    padding-left: 3%;
+    font-family: Lato, sans-serif;
+    font-size: 2rem; }
+  .onepost textarea {
+    width: 100%; }
+  .onepost .createComment input[type=submit] {
+    float: right;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background: linear-gradient(to top right, #f3a6b6, #6684c2);
+    color: white;
+    text-transform: uppercase; }
+
+@media (min-width: 641px) {
+  .headerblog {
+    height: 120px;
+    border-bottom: 1px solid #e7e4e4; }
+    .headerblog .logo {
+      max-width: 14%;
+      float: left;
+      padding: 0 10%; }
+    .headerblog nav {
+      text-align: right;
+      padding: 0 10%;
+      line-height: 120px; }
+
+  .link {
+    margin: 2%; }
+
+  .link:hover {
+    border-bottom: 2px solid #f3a6b6; }
+
+  .mainblog {
+    text-align: left;
+    padding: 0 10%; }
+    .mainblog h1 {
+      display: block;
+      color: #6684c2;
+      text-transform: uppercase;
+      font-family: LatoBold, sans-serif;
+      font-size: 3rem;
+      margin: 2% 0; }
+    .mainblog article {
+      margin: 0;
+      width: 100%;
+      clear: both; }
+      .mainblog article img {
+        max-width: 49%;
+        min-height: 200px;
+        float: left; }
+      .mainblog article .postinfos {
+        width: 49%;
+        min-height: 200px;
+        float: left; }
+        .mainblog article .postinfos > * {
+          padding: 0;
+          padding-left: 5%; }
+        .mainblog article .postinfos a {
+          color: inherit;
+          text-decoration: none;
+          margin: 0; }
+          .mainblog article .postinfos a h2 {
+            padding: 0;
+            padding-left: 5%; }
+    .mainblog .side {
+      clear: both;
+      width: 50%;
+      margin: auto; }
+      .mainblog .side h3 {
+        text-transform: uppercase;
+        font-family: Lato, sans-serif;
+        text-align: center;
+        color: #6684c2;
+        background: #bec9e2;
+        margin: 0 30%;
+        padding: 2% 0; }
+      .mainblog .side .events, .mainblog .side .categories {
+        border: 1px solid #cdcbcb; }
+      .mainblog .side .networksbanners {
+        margin: 4% 0; }
+
+  .onepost {
+    text-align: center;
+    padding: 5%; }
+    .onepost article {
+      margin: 3%; }
+      .onepost article img {
+        width: 50%; }
+      .onepost article p {
+        padding: 2% 0; }
+    .onepost h2 {
+      padding: 2% 0; } }
+@media (min-width: 1025px) {
+  .headerblog {
+    height: 120px; }
+    .headerblog .logo {
+      max-width: 7%; }
+
+  .mainblog {
+    text-align: left;
+    padding: 0 10%; }
+    .mainblog h1 {
+      font-size: 2.5rem;
+      margin: 2% 0; }
+    .mainblog article {
+      margin: 0;
+      padding: 5% 0;
+      width: 70%; }
+      .mainblog article img {
+        max-width: 49%;
+        min-height: 200px; }
+      .mainblog article .postinfos {
+        width: 49%;
+        min-height: 200px; }
+        .mainblog article .postinfos > * {
+          padding: 0;
+          padding-left: 5%; }
+        .mainblog article .postinfos a {
+          color: inherit;
+          text-decoration: none;
+          margin: 0; }
+          .mainblog article .postinfos a h2 {
+            padding: 0;
+            padding-left: 5%; }
+    .mainblog .side {
+      display: none; }
+
+  .onepost article {
+    margin: 0; }
+    .onepost article img {
+      width: 40%; } }
+
+/*# sourceMappingURL=blog.css.map */

@@ -395,24 +395,28 @@ footer {
     body p, body h2, body blockquote {
       padding: 0 20%; }
 
-  .headerindex .logo {
-    top: 2%;
-    max-width: 7%; }
-  .headerindex h1 {
-    top: 17%;
-    font-size: 2.6rem; }
-  .headerindex p {
-    top: 27%; }
-  .headerindex a img {
-    top: 50%;
-    max-width: 10%; }
-  .headerindex a .androidapp {
-    left: 38%; }
-  .headerindex a .appleapp {
-    right: 38%; }
-  .headerindex .downarrow {
-    top: 70%;
-    max-width: 3%; }
+  .headerindex {
+    height: 38vw; }
+    .headerindex .headerbackground {
+      height: 38vw; }
+    .headerindex .logo {
+      top: 2%;
+      max-width: 7%; }
+    .headerindex h1 {
+      top: 17%;
+      font-size: 2.6rem; }
+    .headerindex p {
+      top: 27%; }
+    .headerindex a img {
+      top: 22vw;
+      max-width: 10%; }
+    .headerindex a .androidapp {
+      left: 38%; }
+    .headerindex a .appleapp {
+      right: 38%; }
+    .headerindex .downarrow {
+      top: 32vw;
+      max-width: 3%; }
 
   .mainindex h2 {
     font-size: 3.5rem; }
@@ -502,21 +506,22 @@ footer {
   .loginModal input[type=submit]:active, .loginModal button:active, .registerModal input[type=submit]:active, .registerModal button:active, .addVideoModal input[type=submit]:active, .addVideoModal button:active {
     box-shadow: inset 0 0 15px #888888; }
 
-.loginModalContent p, .registerModalContent p, .addVideoModalContent p {
+.loginModalContent p, .registerModalContent p {
   padding: 3%;
   font-weight: 700; }
 
-.loginModalContent, .registerModalContent, .addVideoModalContent {
+.loginModalContent, .registerModalContent {
   background: white;
   margin: 15% auto;
   text-align: center;
   width: 300px;
   border-radius: 2px; }
 
-.loginModalContent form, .registerModalContent form, .addVideoModalContent form {
+.loginModalContent form, .registerModalContent form {
   padding: 10%; }
 
 .mainblog {
+  /*KEYFRAMES*/
   text-align: left; }
   .mainblog h1 {
     display: none; }

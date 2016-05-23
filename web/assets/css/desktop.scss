@@ -6,6 +6,10 @@
     }
   }
   .headerindex {
+    height: 38vw;
+    .headerbackground{
+      height: 38vw;
+    }
     .logo {
       top: 2%;
       max-width: 7%;
@@ -19,7 +23,7 @@
     }
     a {
       img {
-        top: 50%;
+        top: 22vw;
         max-width: 10%;
       }
       .androidapp {
@@ -30,7 +34,7 @@
       }
     }
     .downarrow {
-      top: 70%;
+      top: 32vw;
       max-width: 3%;
     }
   }
