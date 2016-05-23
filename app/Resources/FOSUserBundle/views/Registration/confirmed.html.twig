@@ -1,0 +1,16 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block body %}
+    {% include 'TandeemBundle:Base:Header.html.twig' %}
+    {% include 'TandeemBundle:Base:Dashboard.html.twig' %}
+
+    <meta http-equiv="refresh" content="5; URL={{ path('Blog') }}">
+    {% trans_default_domain 'FOSUserBundle' %}
+
+    {% block fos_user_content %}
+        <br><br>
+        <p>Bienvenue {{ user.username }} !</p><br><br>
+        <p>Redirection en cours</p><br><br>
+        <img class="loader" src="{{ asset('assets/img/logos/lotus.png') }}" alt="lotus"><br><br>
+    {% endblock fos_user_content %}
+{% endblock %}

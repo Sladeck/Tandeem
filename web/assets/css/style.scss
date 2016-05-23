@@ -314,6 +314,23 @@ footer {
   }
 }
 
+/*KEYFRAMES*/
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.loader {
+  max-width: 10%;
+  animation: loader 2s infinite;
+}
+
 @import "tablet";
 @import "desktop";
 @import "blog";
