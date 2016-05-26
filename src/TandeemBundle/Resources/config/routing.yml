@@ -33,3 +33,11 @@ Create_Comments:
 Delete_Comments:
     path: /Comments/Delete
     defaults: { _controller: TandeemBundle:Comments:delete }
+
+Show_user_Admin:
+    path: /Users
+    defaults: { _controller: TandeemBundle:Blog:showUser }
+
+Delete_User:
+    path: /Users/delete
+    defaults: { _controller: TandeemBundle:Blog:deleteUser }

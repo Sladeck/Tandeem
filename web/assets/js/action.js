@@ -78,4 +78,24 @@ $(function() {
   });
 
 
+  $('.deleteUser').submit(function (){
+    if(confirm('Voulez-vous vraiment supprimer cet utilisateur ?')){
+      var data = $(this).serialize();
+      $.ajax({
+        url: '/Users/delete',
+        type: 'POST',
+        data: data,
+        dataType: 'json',
+        success: function (data) {
+          alert('L\'utilisateur à bien été supprimé !');
+          var selector = '#'+data.id;
+          $(selector).remove();
+        }
+      });
+    }
+
+  return false;
+  });
+
+
 });
