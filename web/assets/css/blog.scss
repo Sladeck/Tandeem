@@ -78,7 +78,6 @@
 }
 
 .mainblog {
-  /*KEYFRAMES*/
   text-align: left;
   h1 {
     display: none;
@@ -113,14 +112,34 @@
       color: #6684c2;
       background: #bec9e2;
       margin: 0 30%;
+      margin-bottom: 20px;
       padding: 2% 0;
     }
+    .event, .event2 {
+      padding: 0 9%;
+      img {
+        float: left;
+        width: 90px;
+        margin-right: 10px;
+      }
+
+      h4 {
+        font-family: Lato;
+        color: #6b87c3;
+      }
+      .eventinfo {
+        height: 90px;
+        margin-bottom: 20px;
+      }
+    }
+
   }
 
   .networksbanners {
     width: 100%;
     margin: 4% 0;
   }
+
 }
 
 .onepost {
@@ -137,9 +156,27 @@
     padding-left: 3%;
     font-family: Lato, sans-serif;
     font-size: 2rem;
+    margin-bottom: 20px;
   }
   textarea {
     width: 100%;
+  }
+  .comments {
+    .comment {
+      margin-bottom: 20px;
+      .user {
+        font-weight: bold;
+      }
+      input[type=submit] {
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        background: linear-gradient(to top right, #f3a6b6, #6684c2);
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+
   }
   .createComment {
     input[type=submit] {
@@ -221,7 +258,7 @@
 
     .side {
       clear: both;
-      width: 50%;
+      width: 60%;
       margin: auto;
       h3 {
         text-transform: uppercase;
@@ -230,6 +267,7 @@
         color: #6684c2;
         background: #bec9e2;
         margin: 0 30%;
+        margin-bottom: 20px;
         padding: 2% 0;
       }
       .events, .categories {
@@ -277,7 +315,7 @@
     article {
       margin: 0;
       padding: 5% 0;
-      width: 70%;
+      width: 60%;
       img {
         max-width: 49%;
         min-height: 200px;
@@ -301,7 +339,13 @@
       }
     }
     .side {
-      display: none;
+      width: 30%;
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      p {
+        padding: 0;
+      }
     }
   }
   .onepost {

@@ -17,8 +17,8 @@
                 <h2>Commentaires :</h2>
 
                 {% for comment in comments %}
-                    <div id="{{ comment.id }}">
-                        <p>{{ comment.user.username }}</p>
+                    <div class="comment" id="{{ comment.id }}">
+                        <p class="user">{{ comment.user.username }}</p>
                         <p>{{ comment.content }}</p>
                         {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
                             {% if (is_granted('ROLE_ADMIN')) or ((comment.user.username) == (app.user.username)) %}

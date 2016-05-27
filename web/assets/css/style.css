@@ -605,7 +605,6 @@ footer {
   padding: 10%; }
 
 .mainblog {
-  /*KEYFRAMES*/
   text-align: left; }
   .mainblog h1 {
     display: none; }
@@ -633,7 +632,20 @@ footer {
       color: #6684c2;
       background: #bec9e2;
       margin: 0 30%;
+      margin-bottom: 20px;
       padding: 2% 0; }
+    .mainblog .events .event, .mainblog .events .event2, .mainblog .categories .event, .mainblog .categories .event2 {
+      padding: 0 9%; }
+      .mainblog .events .event img, .mainblog .events .event2 img, .mainblog .categories .event img, .mainblog .categories .event2 img {
+        float: left;
+        width: 90px;
+        margin-right: 10px; }
+      .mainblog .events .event h4, .mainblog .events .event2 h4, .mainblog .categories .event h4, .mainblog .categories .event2 h4 {
+        font-family: Lato;
+        color: #6b87c3; }
+      .mainblog .events .event .eventinfo, .mainblog .events .event2 .eventinfo, .mainblog .categories .event .eventinfo, .mainblog .categories .event2 .eventinfo {
+        height: 90px;
+        margin-bottom: 20px; }
   .mainblog .networksbanners {
     width: 100%;
     margin: 4% 0; }
@@ -649,9 +661,21 @@ footer {
     padding: 0;
     padding-left: 3%;
     font-family: Lato, sans-serif;
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin-bottom: 20px; }
   .onepost textarea {
     width: 100%; }
+  .onepost .comments .comment {
+    margin-bottom: 20px; }
+    .onepost .comments .comment .user {
+      font-weight: bold; }
+    .onepost .comments .comment input[type=submit] {
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      background: linear-gradient(to top right, #f3a6b6, #6684c2);
+      color: white;
+      text-transform: uppercase; }
   .onepost .createComment input[type=submit] {
     float: right;
     border: none;
@@ -715,7 +739,7 @@ footer {
             padding-left: 5%; }
     .mainblog .side {
       clear: both;
-      width: 50%;
+      width: 60%;
       margin: auto; }
       .mainblog .side h3 {
         text-transform: uppercase;
@@ -724,6 +748,7 @@ footer {
         color: #6684c2;
         background: #bec9e2;
         margin: 0 30%;
+        margin-bottom: 20px;
         padding: 2% 0; }
       .mainblog .side .events, .mainblog .side .categories {
         border: 1px solid #cdcbcb; }
@@ -756,7 +781,7 @@ footer {
     .mainblog article {
       margin: 0;
       padding: 5% 0;
-      width: 70%; }
+      width: 60%; }
       .mainblog article img {
         max-width: 49%;
         min-height: 200px; }
@@ -774,7 +799,12 @@ footer {
             padding: 0;
             padding-left: 5%; }
     .mainblog .side {
-      display: none; }
+      width: 30%;
+      position: absolute;
+      right: 10%;
+      top: 50%; }
+      .mainblog .side p {
+        padding: 0; }
 
   .onepost article {
     margin: 0; }
