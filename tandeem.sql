@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 27 Mai 2016 à 00:30
+-- Généré le :  Ven 27 Mai 2016 à 12:14
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   PRIMARY KEY (`id`),
   KEY `IDX_5F9E962AA76ED395` (`user_id`),
   KEY `IDX_5F9E962AD5E258C5` (`posts_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
@@ -64,16 +64,20 @@ CREATE TABLE IF NOT EXISTS `fos_user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_957A647992FC23A8` (`username_canonical`),
   UNIQUE KEY `UNIQ_957A6479A0D96FBF` (`email_canonical`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=14 ;
 
 --
 -- Contenu de la table `fos_user`
 --
 
 INSERT INTO `fos_user` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `locked`, `expired`, `expires_at`, `confirmation_token`, `password_requested_at`, `roles`, `credentials_expired`, `credentials_expire_at`) VALUES
-(1, 'Killick', 'killick', 'gm.moulin@hotmail.fr', 'gm.moulin@hotmail.fr', 1, 'ra41n3a5pgggs08g0gkc8o4gco8gsk8', '$2y$13$ra41n3a5pgggs08g0gkc8eRA5a73Wt70Cm7ND1C87uXDR8HFcquKG', '2016-05-22 23:04:16', 0, 0, NULL, NULL, NULL, 'a:1:{i:0;s:10:"ROLE_ADMIN";}', 0, NULL),
-(2, 'Jean', 'jean', 'test@test.fr', 'test@test.fr', 1, 'j5c1hv78f5wgocg8c0c4soc8o0w0444', '$2y$13$j5c1hv78f5wgocg8c0c4sePsjbCOaSdUWLNt8XhmPCwOVC1nZKYe.', '2016-05-22 23:15:35', 0, 0, NULL, NULL, NULL, 'a:0:{}', 0, NULL),
-(3, 'admin', 'admin', 'admin@admin.fr', 'admin@admin.fr', 1, 'pplug49x6m84sw8s00448o84wkcs8kc', '$2y$13$pplug49x6m84sw8s00448eGyaR2qKIPD5RMXr82x.qk96mvLfk8fa', '2016-05-25 13:44:52', 0, 0, NULL, NULL, NULL, 'a:1:{i:0;s:10:"ROLE_ADMIN";}', 0, NULL);
+(3, 'admin', 'admin', 'admin@admin.fr', 'admin@admin.fr', 1, 'pplug49x6m84sw8s00448o84wkcs8kc', '$2y$13$pplug49x6m84sw8s00448eGyaR2qKIPD5RMXr82x.qk96mvLfk8fa', '2016-05-27 12:04:56', 0, 0, NULL, NULL, NULL, 'a:1:{i:0;s:10:"ROLE_ADMIN";}', 0, NULL),
+(8, 'Aladin', 'aladin', 'aladin@gmail.com', 'aladin@gmail.com', 1, 'lmzy550dww04kgwc0g0gog0ckgg0c8o', '$2y$13$lmzy550dww04kgwc0g0goeEskEblb.4sxL5O3rjqAP5NCpus5t9wy', '2016-05-27 12:02:59', 0, 0, NULL, NULL, NULL, 'a:0:{}', 0, NULL),
+(9, 'Lotshana', 'lotshana', 'lotshana@gmail.com', 'lotshana@gmail.com', 1, 'eh5nrv8xivc400gswk88k88o800wkgk', '$2y$13$eh5nrv8xivc400gswk88ku7P4mATMoR0mhIYVPR19gFeJPedsKUwi', '2016-05-27 12:03:33', 0, 0, NULL, NULL, NULL, 'a:0:{}', 0, NULL),
+(10, 'Thomas', 'thomas', 'thomas@gmail.com', 'thomas@gmail.com', 1, 'hlwaf7i2j5css0okw0o4wkwk8c8swgg', '$2y$13$hlwaf7i2j5css0okw0o4weZqIVqYsC/7dFMVTo6By3yKfA1oB7eMW', '2016-05-27 12:04:47', 0, 0, NULL, NULL, NULL, 'a:0:{}', 0, NULL),
+(11, 'Sabrina', 'sabrina', 'sabrina@gmail.com', 'sabrina@gmail.com', 1, '16zevloadilccw0cosko044wwssggc8', '$2y$13$16zevloadilccw0cosko0uwEZo7XqrKPbXRmoagvIS7Z7uEUEV/p6', '2016-05-27 12:05:56', 0, 0, NULL, NULL, NULL, 'a:0:{}', 0, NULL),
+(12, 'Margaux', 'margaux', 'margaux@gmail.com', 'margaux@gmail.com', 1, '6hmrwlit17wogokgc440sso0swkcgg8', '$2y$13$6hmrwlit17wogokgc440seHJBkBSXzl6KATH/lqtPnDgLX4HVf7Yu', '2016-05-27 12:06:19', 0, 0, NULL, NULL, NULL, 'a:0:{}', 0, NULL),
+(13, 'Sebastien', 'sebastien', 'seb@gmail.com', 'seb@gmail.com', 1, 'doawwyexpwooo4sk480cc0cgo4ks8og', '$2y$13$doawwyexpwooo4sk480ccugU8tgrXqzx21RH4LRKunArjtkQx3sSW', '2016-05-27 12:06:43', 0, 0, NULL, NULL, NULL, 'a:0:{}', 0, NULL);
 
 -- --------------------------------------------------------
 
