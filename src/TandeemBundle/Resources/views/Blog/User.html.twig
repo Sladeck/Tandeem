@@ -4,31 +4,30 @@
         {% include 'TandeemBundle:Base:Header.html.twig' %}
         {% include 'TandeemBundle:Base:Dashboard.html.twig' %}
 
-      <table>
-      {% for user in users %}
-      <tr id="{{ user.id }}">
-        <td>
-          {{ user.username }}
-        </td>
-        <td>
-          {{ user.email }}
-        </td>
-        <td>
-          {{ user.lastLogin|date("d/m/Y H:i:s") }}
-        </td>
-        <td>
-          {{ user.roles|join(', ') }}
-        </td>
-        <td>
-          <form class="deleteUser" method="post">
-            <input type="hidden" name="id" value="{{ user.id }}">
-            <input type="submit" name="delUser" value="Supprimer">
-          </form>
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
-
-
-
+        <hr>
+        <table width="100%">
+            {% for user in users %}
+                <tr id="{{ user.id }}">
+                    <td>
+                        {{ user.username }}
+                    </td>
+                    <td>
+                        {{ user.email }}
+                    </td>
+                    <td>
+                        {{ user.lastLogin|date("d/m/Y H:i:s") }}
+                    </td>
+                    <td>
+                        {{ user.roles|join(', ') }}
+                    </td>
+                    <td>
+                        <form class="deleteUser" method="post">
+                            <input type="hidden" name="id" value="{{ user.id }}">
+                            <input type="submit" name="delUser" value="Supprimer">
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <hr>
     {% endblock %}
